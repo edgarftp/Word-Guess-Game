@@ -1,2 +1,13 @@
+body {
+    background-color: black;
+    color: #d99942;
+}
 
-var wordguess = document.getElementById(underscores);
+#banner {
+    width: 100%;
+    background-color: white;
+}
+
+#imgBanner {
+    height: 100px;
+}
