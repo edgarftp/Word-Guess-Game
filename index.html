@@ -31,16 +31,16 @@
         <!-- ROW 3-->
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
-                <button id="startGame" class="btn btn-success col-2" onclick="start_Game()">Start Game</button>
+                <button id="startGame" class="btn btn-success col-lg-2" onclick="start_Game()">Start Game</button>
             </div> 
         </div>
         <!--  ROW 3 #2 -->
         <div class="row">
                 <div class="col-lg-12">
                     <div id= "gameMode" class="col-lg-12 justify-content-center">
-                            <button class="btn btn-success m-1 col-lg-2 float-left" onclick="easy_mode()">Easy Mode</button>
-                            <button class="btn btn-warning m-1 col-lg-2 float-left" onclick="medium_mode()">Medium Mode</button>
-                            <button class="btn btn-danger m-1 col-lg-2 float-left" onclick="hard_mode()">Hard Mode</button>
+                            <button class="btn btn-success m-1 col-lg-2 float-left" onclick="game_mode(7)">Easy Mode</button>
+                            <button class="btn btn-warning m-1 col-lg-2 float-left" onclick="game_mode(5)">Medium Mode</button>
+                            <button class="btn btn-danger m-1 col-lg-2 float-left" onclick="game_mode(3)">Hard Mode</button>
                     </div>
                 </div> 
             </div>
@@ -50,7 +50,7 @@
         <div class="row">
             <div class= "col-lg-12">                    
                 <div id= "livesDiv"class="col-lg-3">
-                    <h3 id="lives" class="float-left">5</h3>
+                    <h3 id="lives" class="float-left"></h3>
                     <h3> &nbsp; &nbsp; Remaining lives</h3>
                 </div>
             </div>
