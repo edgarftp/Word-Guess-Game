@@ -35,7 +35,7 @@ pick_word : function (){
         this.under.push("__ ");
         }
         else{
-        this.under.push("&nbsp" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;");
+        this.under.push("&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;" + "&nbsp;");
         }
     }
     //transforms under array into a string with join("")
@@ -52,25 +52,27 @@ display_btn: function(id) {
         document.getElementById("gameMode").style.display = "none";
         document.getElementById("backMenu").style.display = "none";
         document.getElementById("livesDiv").style.display = "none";
-        document.getElementById("wins").style.display = "none";
+        document.getElementById("winsDiv").style.display = "none";
         document.getElementById("underscores").style.display = "none";
         document.getElementById("tried").style.display = "none";
     }
     else if (this.btnMenuDisplay == 2){
+        this.wins = 0;
         document.getElementById("startGame").style.display= "none";
         document.getElementById("gameMode").style.display = "flex";
         document.getElementById("backMenu").style.display = "none";
         document.getElementById("livesDiv").style.display = "none";
-        document.getElementById("wins").style.display = "none";
+        document.getElementById("winsDiv").style.display = "none";
         document.getElementById("underscores").style.display = "none";
         document.getElementById("tried").style.display = "none";
     }
     else if (this.btnMenuDisplay == 3){
+        console.log(this.wins);
         document.getElementById("startGame").style.display= "none";
         document.getElementById("gameMode").style.display = "none";
         document.getElementById("backMenu").style.display = "flex";
         document.getElementById("livesDiv").style.display = "flex";
-        document.getElementById("wins").style.display = "flex";
+        document.getElementById("winsDiv").style.display = "flex";
         document.getElementById("underscores").style.display = "block";
         document.getElementById("tried").style.display = "block";
     }
@@ -102,7 +104,6 @@ game_logic: function (j) {
     this.pick_word();
     this.triedArray.length = 0;
     this.joinTried="";
-    this.wins= 0;
     document.getElementById("gifHolder").style.display = "none";
     document.getElementById("tried").innerHTML= "You have tried: ";
     document.onkeyup = function(event) {
@@ -141,10 +142,10 @@ game_logic: function (j) {
                 }
 
                 if (movies.under.indexOf("__ ") == -1){
+                    movies.wins+=1;
                     var audioWin = document.getElementById("audioWinner");
                     audioWin.play();
                     movies.display_gif(movies.rand);
-                    movies.wins +=1;
                     setTimeout(function(){movies.game_mode(movies.livesI,3)}, 4000);
                     
                 }
@@ -160,7 +161,7 @@ document.getElementById("livesDiv").style.display = "none";
 document.getElementById("tried").style.display = "none";
 document.getElementById("gameMode").style.display = "none";
 document.getElementById("backMenu").style.display = "none";
-document.getElementById("wins").style.display = "none";
+document.getElementById("winsDiv").style.display = "none";
 document.getElementById("audioWinner").style.display = "none";
 document.getElementById("gifHolder").style.display = "none";
 
