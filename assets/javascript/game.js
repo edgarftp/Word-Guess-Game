@@ -49,6 +49,7 @@ display_btn: function(id) {
     this.btnMenuDisplay = id;
     if (this.btnMenuDisplay == 1) {
         document.getElementById("startGame").style.display= "block";
+        document.getElementById("mobile").style.display= "block";
         document.getElementById("gameMode").style.display = "none";
         document.getElementById("backMenu").style.display = "none";
         document.getElementById("livesDiv").style.display = "none";
@@ -59,6 +60,7 @@ display_btn: function(id) {
     else if (this.btnMenuDisplay == 2){
         this.wins = 0;
         document.getElementById("startGame").style.display= "none";
+        document.getElementById("mobile").style.display= "none";
         document.getElementById("gameMode").style.display = "flex";
         document.getElementById("backMenu").style.display = "none";
         document.getElementById("livesDiv").style.display = "none";
@@ -69,6 +71,7 @@ display_btn: function(id) {
     else if (this.btnMenuDisplay == 3){
         console.log(this.wins);
         document.getElementById("startGame").style.display= "none";
+        document.getElementById("mobile").style.display= "none";
         document.getElementById("gameMode").style.display = "none";
         document.getElementById("backMenu").style.display = "flex";
         document.getElementById("livesDiv").style.display = "flex";
